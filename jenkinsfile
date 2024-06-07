@@ -1,5 +1,5 @@
 pipeline {
-   agent {'Jenkins-Agent'}
+   agent {label 'Jenkins-Agent'}
    tools {
          jdk 'java17'
          maven 'Maven3' 
@@ -12,7 +12,7 @@ pipeline {
        }
        stage("checkout from SCM"){
              steps{
-             git branch: 'main', credentialsId: 'github', URL: 'https://github.com/manish444/register-app' 
+             git branch: 'main', credentialsId: 'github', url: 'https://github.com/manish444/register-app' 
              }
        }
        stage("build appliation"){
