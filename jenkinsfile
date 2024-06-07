@@ -7,7 +7,7 @@ pipeline {
    stages{
        stage("cleans workspace"){
            steps{
-             CleanWS() ##this fun is used by workspace clean pipeine plugin to remove unnecessary files before working on it
+             cleanWS() ##this fun is used by workspace clean pipeine plugin to remove unnecessary files before working on it
               }
        }
        stage("checkout from SCM"){
