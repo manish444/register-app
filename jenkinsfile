@@ -7,7 +7,7 @@ pipeline {
    stages{
        stage("cleans workspace"){
            steps{
-             cleanWs() ##this fun is used by workspace clean pipeine plugin to remove unnecessary files before working on it
+             cleanWs() 
               }
        }
        stage("checkout from SCM"){
@@ -17,7 +17,7 @@ pipeline {
        }
        stage("build appliation"){
             steps{
-            sh 'mvn clean package'  ##removes build artifacts from previous builds to start with a clean workspace
+            sh 'mvn clean package'  
             }
        }
        stage(Test Application){
